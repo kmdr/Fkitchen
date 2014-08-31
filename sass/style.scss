@@ -1,7 +1,8 @@
 // @import "compass/reset";
 
-.wrapper{
-	width: 880px;
+.foodwrapper{
+	width: 1410px;
+	height: 960px;
 	margin: 0 auto;
 
 	// cut
@@ -19,9 +20,16 @@
 	.gas{
 		width: 735px;
 		height: 142px;
-		background: url("../images/utensil/img_gas_off.png");
 		position: relative;
-
+		&.on{
+			background: url("../images/utensil/img_gas_on.png");
+			.gasSwitch{
+				-webkit-transform: rotate(120deg);
+			}
+		}
+		&.off{
+			background: url("../images/utensil/img_gas_off.png");
+		}
 		.gasSwitch{
 			cursor: pointer;
 			width: 80px;

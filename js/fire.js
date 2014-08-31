@@ -3,23 +3,27 @@
 
 $(function(){
 
-	var fireFlag = 0;
-	console.log(fireFlag);
+	var fireFlagOff = 0;
+	var fireFlagOn = 0;
 
-	$(".gas .gasSwitch").rotate({
+	$(".gas.on .gasSwitch").rotate({
+		angle: 120
+	})
+
+	$(".gas.off .gasSwitch").rotate({
         bind:
             {
             click: function(){
 
-            		if(fireFlag == 0){
+            		if(fireFlagOff == 0){
 	                    $(this).rotate({
 	                        angle: 0,
 	                        animateTo: 120,
 	                        easing: $.easing.easeInOutExpo
 	                    })
-	                    fireFlag = 1;
+	                    fireFlagOff = 1;
 
-	                    $(".gas").css("background", "url(\"images/utensil/img_gas_on.png\")");
+	                    $(".gas.off").css("background", "url(\"images/utensil/img_gas_on.png\")");
 
 	                }else{
 	                    $(this).rotate({
@@ -27,8 +31,8 @@ $(function(){
 	                        animateTo: 0,
 	                        easing: $.easing.easeInOutExpo
 	                    })
-	                    fireFlag = 0;
-	                    $(".gas").css("background", "url(\"images/utensil/img_gas_off.png\")");
+	                    fireFlagOff = 0;
+	                    $(".gas.off").css("background", "url(\"images/utensil/img_gas_off.png\")");
 
 	                }
 
@@ -36,5 +40,36 @@ $(function(){
             }
     });
 
-	console.log(fireFlag);
+	$(".gas.on .gasSwitch").rotate({
+        bind:
+            {
+            click: function(){
+
+            		if(fireFlagOn == 0){
+	                    $(this).rotate({
+	                        angle: 120,
+	                        animateTo: 0,
+	                        easing: $.easing.easeInOutExpo
+	                    })
+	                    fireFlagOn = 1;
+
+	                    $(".gas.on").css("background", "url(\"images/utensil/img_gas_off.png\")");
+
+	                }else{
+	                    $(this).rotate({
+	                        angle: 0,
+	                        animateTo: 120,
+	                        easing: $.easing.easeInOutExpo
+	                    })
+	                    fireFlagOn = 0;
+	                    $(".gas.on").css("background", "url(\"images/utensil/img_gas_on.png\")");
+
+	                }
+
+                }
+            }
+    });
+
+
+
 });

@@ -2,13 +2,15 @@ $(function(){
 
 	var clickNum = 0;
 
-	$(".wrapper").click(function(){
-		$(".wrapper .food").eq(clickNum).css("marginLeft", "20px");
-		clickNum++;
+	$(".cut").click(function(){
+		if(clickNum < 2){
+			$(".foodwrapper .food").eq(clickNum).css("marginLeft", "20px");
+		}
 
 		if(clickNum == 2){
 			alert("finish");
 		}
+		clickNum++;
 
 	});
 
