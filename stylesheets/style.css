@@ -1,0 +1,8 @@
+.wrapper {
+  cursor: pointer;
+  width: 880px;
+  margin: 0 auto;
+}
+.wrapper .food {
+  float: right;
+}
