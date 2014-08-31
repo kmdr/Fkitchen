@@ -43,8 +43,8 @@
 ・mixの時
 
 	<div class='foodwrapper mix'>
-        <div id='canvas-wrapper'>
-            <canvas id='cover-canvas' width='800' height='450'></canvas>
+        <div class='canvas-wrapper'>
+            <canvas class='cover-canvas' width='800' height='450'></canvas>
 <!--             <div><img src='images/img_board.png' height='227' width='366'></div>
  -->
         </div>
@@ -54,10 +54,11 @@
         </div>
  
         <!-- 事前に一回画像を読み込ませておく -->
-        <div id='preload'>
+        <div class='preload'>
             <img src='images/utensil/img_inPan_bg.png' height='633' width='837'>
-            <img src='images/utensil/img_inPan_0.png' height='633' width='633'>
+            <img src='images/utensil/img_inPan_1.png' height='633' width='633'>
         </div>
 	
+
 
 	</div>
