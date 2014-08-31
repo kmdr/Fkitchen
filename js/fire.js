@@ -10,7 +10,7 @@ $(function(){
         bind:
             {
             click: function(){
-                    
+
             		if(fireFlag == 0){
 	                    $(this).rotate({
 	                        angle: 0,

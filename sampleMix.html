@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="Content-Language" content="ja" />
+        <meta http-equiv="Content-Style-Type" content="text/css" />
+        <meta http-equiv="Content-Script-Type" content="text/javascript" />
+        <title>Canvas</title>
+        <script src="js/jquery.min.js"></script>
+        <!--[if IE]><script type="text/javascript" src="/js/excanvas.compiled.js"></script><![endif]-->
+        <script src="js/imagesLoaded.js"></script>
+        <script src="js/jcanvas.js"></script>
+        <script src="js/mix.js"></script>
+    </head>
+    <style type="text/css">
+        #canvas-wrapper {
+            position: relative;
+            width: 840px;
+            height: 640px;
+        }
+        #cover-canvas {
+            position: absolute;
+            background-color: #888;
+        }
+        #canvas-wrapper div{
+            position: absolute;
+            top: 209px;
+            left: 384px;
+        }
+        #preload {
+            display: none;
+        }
+    </style>
+    <body>
+  
+        <!-- キャンバスのラップ -->
+        <div id="canvas-wrapper">
+            <canvas id="cover-canvas" width="800" height="450"></canvas>
+<!--             <div><img src="images/img_board.png" height="227" width="366"></div>
+ -->        </div>
+ 
+        <!-- 生成される画像 -->
+        <div class="generated-image">
+        </div>
+ 
+        <!-- 事前に一回画像を読み込ませておく -->
+        <div id="preload">
+            <img src="images/utensil/img_inPan_bg.png" height="633" width="837">
+            <img src="images/utensil/img_inPan_0.png" height="633" width="633">
+        </div>
+    </body>
+</html>
