@@ -1,12 +1,39 @@
 // @import "compass/reset";
 
 .wrapper{
-	cursor: pointer;
 	width: 880px;
 	margin: 0 auto;
+
+	// cut
 	.food{
+		cursor: pointer;
 		float: right;
+	}
+
+	// fire
+	.pan{
+		width: 735px;
+		height: 349px;
+	}
+
+	.gas{
+		width: 735px;
+		height: 142px;
+		background: url("../images/utensil/img_gas_off.png");
+		position: relative;
+
+		.gasSwitch{
+			cursor: pointer;
+			width: 80px;
+			height: 80px;
+			right: 80px;
+			bottom: 8px;
+			position: absolute;
+		}
 	}
 
 
 }
+
+
+

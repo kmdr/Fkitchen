@@ -1,8 +1,26 @@
 .wrapper {
-  cursor: pointer;
   width: 880px;
   margin: 0 auto;
 }
 .wrapper .food {
+  cursor: pointer;
   float: right;
+}
+.wrapper .pan {
+  width: 735px;
+  height: 349px;
+}
+.wrapper .gas {
+  width: 735px;
+  height: 142px;
+  background: url("../images/utensil/img_gas_off.png");
+  position: relative;
+}
+.wrapper .gas .gasSwitch {
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  right: 80px;
+  bottom: 8px;
+  position: absolute;
 }
