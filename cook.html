@@ -11,25 +11,32 @@
     <script src="js/imagesLoaded.js"></script>
     <script src="js/jcanvas.js"></script>
     <script src="js/mix.js"></script>
+    <script src="js/top.js"></script>
 
 
+<!-- 	<script>
+		$(window).on('touchmove.noScroll', function(e) {
+    		e.preventDefault();
+		});
+	</script>
+ -->
 </head>
 <style type="text/css">
-    #canvas-wrapper {
+    .canvas-wrapper {
         position: relative;
         width: 840px;
         height: 640px;
     }
-    #cover-canvas {
+    .cover-canvas {
         position: absolute;
         background-color: #888;
     }
-    #canvas-wrapper div{
+    .canvas-wrapper div{
         position: absolute;
         top: 209px;
         left: 384px;
     }
-    #preload {
+    .preload {
         display: none;
     }
 </style>
@@ -57,6 +64,16 @@
 			</div>
 		</div>
 	</div>
+	<div class="foodwrapper gasoff">
+		<div class="pan">
+			<img src="images/utensil/img_pan.png" height="349" width="735" alt="">
+		</div>
+		<div class="gas off">
+			<div class="gasSwitch">
+				<img src="images/utensil/img_gasSwitch.png" height="80" width="80" alt="">
+			</div>
+		</div>
+	</div>
 	<div class="foodwrapper gason">
 		<div class="pan">
 			<img src="images/utensil/img_pan.png" height="349" width="735" alt="">
@@ -69,8 +86,8 @@
 	</div>
 
 	<div class="foodwrapper mix">
-        <div id="canvas-wrapper">
-            <canvas id="cover-canvas" width="800" height="450"></canvas>
+        <div class="canvas-wrapper">
+            <canvas class="cover-canvas" width="800" height="450"></canvas>
 <!--             <div><img src="images/img_board.png" height="227" width="366"></div>
  -->
         </div>
@@ -80,7 +97,7 @@
         </div>
  
         <!-- 事前に一回画像を読み込ませておく -->
-        <div id="preload">
+        <div class="preload">
             <img src="images/utensil/img_inPan_bg.png" height="633" width="837">
             <img src="images/utensil/img_inPan_0.png" height="633" width="633">
         </div>
@@ -88,6 +105,31 @@
 
 	</div>
 
+	<div class="foodwrapper mix">
+        <div class="canvas-wrapper">
+            <canvas class="cover-canvas" width="800" height="450"></canvas>
+<!--             <div><img src="images/img_board.png" height="227" width="366"></div>
+ -->
+        </div>
+ 
+        <!-- 生成される画像 -->
+        <div class="generated-image">
+        </div>
+ 
+        <!-- 事前に一回画像を読み込ませておく -->
+        <div class="preload">
+            <img src="images/utensil/img_inPan_bg.png" height="633" width="837">
+            <img src="images/utensil/img_inPan_1.png" height="633" width="633">
+        </div>
+	
 
+	</div>
+
+	<div class="foodwrapper">
+		
+		<h1>カレーができたよ</h1>
+
+		<p class="goTop">ちがうりょうりをつくる。</p>
+	</div>
 </body>
 </html>
