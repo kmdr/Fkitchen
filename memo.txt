@@ -1,0 +1,63 @@
+・cutの時
+
+	<div class="foodwrapper cut">
+		<div class="food">
+			<img src="images/cookimg/（野菜の名前）_0.png" height="596" width="280" alt="">
+		</div>
+		<div class="food">
+			<img src="images/cookimg/（野菜の名前）_1.png" height="596" width="280" alt="">
+		</div>
+		<div class="food">
+			<img src="images/cookimg/（野菜の名前）_2.png" height="596" width="280" alt="">
+		</div>
+	</div>
+
+
+・gasoffの時
+
+	<div class="foodwrapper gasoff">
+		<div class="pan">
+			<img src="images/utensil/img_pan.png" height="349" width="735" alt="">
+		</div>
+		<div class="gas off">
+			<div class="gasSwitch">
+				<img src="images/utensil/img_gasSwitch.png" height="80" width="80" alt="">
+			</div>
+		</div>
+	</div>
+
+・gasonの時
+
+	<div class="foodwrapper gason">
+		<div class="pan">
+			<img src="images/utensil/img_pan.png" height="349" width="735" alt="">
+		</div>
+		<div class="gas on">
+			<div class="gasSwitch">
+				<img src="images/utensil/img_gasSwitch.png" height="80" width="80" alt="">
+			</div>
+		</div>
+	</div>
+
+
+・mixの時
+
+	<div class="foodwrapper mix">
+        <div id="canvas-wrapper">
+            <canvas id="cover-canvas" width="800" height="450"></canvas>
+<!--             <div><img src="images/img_board.png" height="227" width="366"></div>
+ -->
+        </div>
+ 
+        <!-- 生成される画像 -->
+        <div class="generated-image">
+        </div>
+ 
+        <!-- 事前に一回画像を読み込ませておく -->
+        <div id="preload">
+            <img src="images/utensil/img_inPan_bg.png" height="633" width="837">
+            <img src="images/utensil/img_inPan_0.png" height="633" width="633">
+        </div>
+	
+
+	</div>
