@@ -1,10 +1,12 @@
-
+function scrollDown(){
+	var scroll = $("body").scrollTop();
+	$("body").scrollTop(scroll+$(".foodwrapper").height());
+console.log(scroll);
+}
 
 
 $(function(){
 
-	var fireFlagOff = 0;
-	var fireFlagOn = 0;
 
 	$(".gas.on .gasSwitch").rotate({
 		angle: 120
@@ -15,26 +17,16 @@ $(function(){
             {
             click: function(){
 
-            		if(fireFlagOff == 0){
 	                    $(this).rotate({
 	                        angle: 0,
 	                        animateTo: 120,
 	                        easing: $.easing.easeInOutExpo
 	                    })
 	                    fireFlagOff = 1;
+	                    $(this).parent().css("background", "url(\"images/utensil/img_gas_on.png\")");
+						setTimeout('scrollDown()',1000);
+	              			
 
-	                    $(".gas.off").css("background", "url(\"images/utensil/img_gas_on.png\")");
-
-	                }else{
-	                    $(this).rotate({
-	                        angle: 120,
-	                        animateTo: 0,
-	                        easing: $.easing.easeInOutExpo
-	                    })
-	                    fireFlagOff = 0;
-	                    $(".gas.off").css("background", "url(\"images/utensil/img_gas_off.png\")");
-
-	                }
 
                 }
             }
@@ -45,7 +37,6 @@ $(function(){
             {
             click: function(){
 
-            		if(fireFlagOn == 0){
 	                    $(this).rotate({
 	                        angle: 120,
 	                        animateTo: 0,
@@ -53,18 +44,8 @@ $(function(){
 	                    })
 	                    fireFlagOn = 1;
 
-	                    $(".gas.on").css("background", "url(\"images/utensil/img_gas_off.png\")");
-
-	                }else{
-	                    $(this).rotate({
-	                        angle: 0,
-	                        animateTo: 120,
-	                        easing: $.easing.easeInOutExpo
-	                    })
-	                    fireFlagOn = 0;
-	                    $(".gas.on").css("background", "url(\"images/utensil/img_gas_on.png\")");
-
-	                }
+	                    $(this).parent().css("background", "url(\"images/utensil/img_gas_off.png\")");
+						setTimeout('scrollDown()',1000);
 
                 }
             }

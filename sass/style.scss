@@ -1,9 +1,26 @@
 // @import "compass/reset";
+body{
+	// overflow: hidden;
+	background: #FFF1E9;
+}
+
+
+.goTop{
+	display: block;
+	border-bottom: 1px solid #535353;
+}
+
 
 .foodwrapper{
-	width: 1410px;
+	width: 1300px;
 	height: 960px;
 	margin: 0 auto;
+	&.cut{
+		background: url("../images/img_board.png") no-repeat;
+		background-position: top;
+
+	}
+
 
 	// cut
 	.food{
