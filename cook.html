@@ -4,15 +4,14 @@
 	<meta charset='UTF-8'>
 	<title>はじめてのキッチン　-りょうりをつくろう-</title>
 	<link rel='stylesheet' href='stylesheets/style.css'>
-	<script type='text/javascript' src='js/jquery.min.js'></script>
-	<script type='text/javascript' src='js/cut.js'></script>
-	<script type='text/javascript' src='js/jqueryRotate.js'></script>
-	<script type='text/javascript' src='js/fire.js'></script>
-    <script src='js/imagesLoaded.js'></script>
-    <script src='js/jcanvas.js'></script>
-    <script src='js/mix.js'></script>
-    <script src='js/top.js'></script>
 
+   <script>
+
+      $(document).ready(function(){
+        $("#example2").minimalect();
+      });
+    </script>
+ 
 
 <!-- 	<script>
 		$(window).on('touchmove.noScroll', function(e) {
@@ -25,7 +24,14 @@
     .canvas-wrapper {
         position: relative;
         width: 840px;
-        height: 640px;
+    	<script type='text/javascript' src='js/jquery.min.js'></script>
+	<script type='text/javascript' src='js/cut.js'></script>
+	<script type='text/javascript' src='js/jqueryRotate.js'></script>
+	<script type='text/javascript' src='js/fire.js'></script>
+    <script src='js/imagesLoaded.js'></script>
+    <script src='js/jcanvas.js'></script>
+    <script src='js/mix.js'></script>
+    <script src='js/top.js'></script>    height: 640px;
         margin: 0 auto;
     }
     .cover-canvas {
@@ -46,6 +52,11 @@
 <body>
 
 	<div class='wrapper'>
+		<div class='title'>
+			<img src="images/img_title.png">
+
+		</div>
+
 		<div class='foodwrapper cut'>
 			<h2>しょくざいをきろう</h2>
 			<div class='food'>

@@ -1,7 +1,9 @@
 function scrollDown(){
+	console.log(scroll);
+	alert("おかあさんをまってね")
 	var scroll = $("body").scrollTop();
 	$("body").scrollTop(scroll+$(".foodwrapper").height());
-console.log(scroll);
+	console.log(scroll);
 }
 
 
@@ -24,8 +26,10 @@ $(function(){
 	                    })
 	                    fireFlagOff = 1;
 	                    $(this).parent().css("background", "url(\"images/utensil/img_gas_on.png\")");
+
+
 						setTimeout('scrollDown()',1000);
-	              			
+
 
 
                 }

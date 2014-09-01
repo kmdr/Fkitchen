@@ -40,7 +40,7 @@ mb_internal_encoding("utf-8");
 mb_http_input("auto");
 mb_http_output("utf-8");
 
-$link = new mysqli("192.168.50.129", "root", "root", "Fkitchen");
+$link = new mysqli("localhost", "root", "root", "Fkitchen");
 
 if(mysqli_connect_errno()) {
   printf("connect failed: %s\n", $link->connect_error());

@@ -1,18 +1,41 @@
 // @import "compass/reset";
 body{
 	// overflow: hidden;
-	background: #FFF1E9;
+	background: url("../images/bg.png");
+}
+h2{
+	margin: 0;
 }
 
+.wrapper{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+.title{
+	width: 702px;
+	height: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.minict_wrapper{
+	margin-top: 20px;
+}
 
 .goTop{
 	display: block;
 	border-bottom: 1px solid #535353;
+	cursor: pointer;
+}
+
+input#r_send{
+	margin-top: 100px;
 }
 
 
 .foodwrapper{
-	width: 1300px;
+	width: 1200px;
 	height: 960px;
 	margin: 0 auto;
 	&.cut{
@@ -20,7 +43,19 @@ body{
 		background-position: top;
 
 	}
+	&.gasoff{
+		width: 735px;
+		height: 960px;
+		margin: 0 auto;
+	}
+	&.gason{
+		@extend .gasoff;
+	}
 
+	h2{
+		font-size: 3em;
+		background: white;
+	}
 
 	// cut
 	.food{

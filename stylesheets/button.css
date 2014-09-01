@@ -1,0 +1,83 @@
+.button {
+    width: 200px;
+    height: 80px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    text-align: center;
+    font-size: 30px;
+    text-decoration: none;
+    max-width: 300px;
+    border: none;
+}
+.button-min {
+    color: #fff;
+    display: inline-block;
+    height: 107px;
+    line-height: 27px;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 90%;
+    min-width: 120px;
+    max-width: 180px;
+}
+.button::before,
+.button::after,
+.button-min::before,
+.button-min::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+.button,
+.button::before,
+.button::after,
+.button-min,
+.button-min::before,
+.button-min::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.buttonBlue{
+    background-color: #99cccc;
+}
+.buttonPink{
+    background-color: #ff8888;
+}
+.buttonYellow{
+    background-color: #f9bb82;
+}
+.buttonGreen{
+    background-color: #cccc99;
+}
+.buttonBlack{
+    background-color: #5d5d5d;
+}
+.buttonWhite{
+    background-color: #FFF;
+    border: 1px solid #999;
+    color: #999;
+    text-shadow: 2.8px 2.8px 0px #EEE; 
+}
+
+.button:hover,
+.button-min:hover{
+    border-radius: 6px;
+    letter-spacing: 1px;
+    opacity: 0.8;
+}
+
+.button:active,
+.button-min:active{
+    color: #333333;
+    text-shadow: none; 
+    transition: all 0s;
+}
+

@@ -1,20 +1,54 @@
 body {
-  background: #FFF1E9;
+  background: url("../images/bg.png");
+}
+
+h2 {
+  margin: 0;
+}
+
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  width: 702px;
+  height: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.minict_wrapper {
+  margin-top: 20px;
 }
 
 .goTop {
   display: block;
   border-bottom: 1px solid #535353;
+  cursor: pointer;
+}
+
+input#r_send {
+  margin-top: 100px;
 }
 
 .foodwrapper {
-  width: 1300px;
+  width: 1200px;
   height: 960px;
   margin: 0 auto;
 }
 .foodwrapper.cut {
   background: url("../images/img_board.png") no-repeat;
   background-position: top;
+}
+.foodwrapper.gasoff, .foodwrapper.gason {
+  width: 735px;
+  height: 960px;
+  margin: 0 auto;
+}
+.foodwrapper h2 {
+  font-size: 3em;
+  background: white;
 }
 .foodwrapper .food {
   cursor: pointer;

@@ -3,14 +3,13 @@ $(function(){
 	var clickNum = 0;
 
 	$(".cut").click(function(){
-		console.log($(this).children().eq(clickNum));
+		console.log($(this).children("div").eq(clickNum));
 		if(clickNum < 2){
-			$(this).children().eq(clickNum).css("marginLeft", "20px");
-			console.log("ok");
+			$(this).children("div").eq(clickNum).css("marginLeft", "20px");
 		}
 
 		if(clickNum == 2){
-			alert("finish");
+            alert("おかあさんをまってね");
 			var scroll = $("body").scrollTop();
 			$("body").scrollTop(scroll+960);
 			clickNum = 0;

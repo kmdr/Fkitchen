@@ -8,7 +8,7 @@ mb_http_input("auto");
 mb_http_output("utf-8");
 
 $sql = "SELECT food.id, food.name FROM recipes INNER JOIN r_f ON recipes.id = r_f.rid INNER JOIN food ON r_f.fid = food.id WHERE ";
-$link = new mysqli("192.168.50.129", "root", "root", "Fkitchen");
+$link = new mysqli("host", "root", "root", "Fkitchen");
 
 if(isset($_GET['id'])) {
   $sql .= "recipes.id=".mysqli_real_escape_string($link, $_GET['id']);

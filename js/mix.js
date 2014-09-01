@@ -4,10 +4,9 @@ $(function(){
 
     var $mixes = $(".mix");
     var isRolling = false;
-    var angleFlag = 0;
-    var oldAngle = 0;
 
-    var startX, startY;
+    var oldX, oldY, sumArc = 0;
+
 
     $.each($mixes, function(){
         var $mix = $(this);
@@ -218,8 +217,8 @@ $(function(){
                         layer.data.startAngle = radian / (Math.PI / 180);
                         layer.data.startRotate = boarder_layer.rotate;
 
-                        startX = layer.eventX;
-                        startY = layer.eventY;
+                        oldX = layer.eventX;
+                        oldY = layer.eventY;
 
                         // 半透明にする
                         $canvas.getLayer("image").opacity = 1;
@@ -229,7 +228,8 @@ $(function(){
                             distanceX,
                             distanceY,
                             radian,
-                            angle;
+                            angle,
+                            add;
 
 
 
@@ -242,19 +242,20 @@ $(function(){
                         angle = radian / (Math.PI / 180);
                         //console.log("start=", layer.data.startAngle);
                         dragangle = angle - layer.data.startAngle;
- 
-                         // console.log(angle - layer.data.startAngle);
-                        if(angle > 0 && angle < 30){
-                            count++;
-                        }
-                        if(count > 30){
-                            // alert("finish!");
-                            // count = 0;
-                            // var scroll = $("body").scrollTop();
-                            // $("body").scrollTop(scroll+$(".foodwrapper").height());
 
+                        if(isRolling){
+                            var x1 = layer.eventX/(Math.sqrt(((layer.eventX)*(layer.eventY))+((layer.eventX)*(layer.eventY))));
+                            var y1 = layer.eventY/(Math.sqrt(((layer.eventX)*(layer.eventY))+((layer.eventX)*(layer.eventY))));
+                            var x2 = oldX/(Math.sqrt(((oldX)*(oldY))+((oldX)*(oldY))));
+                            var y2 = oldY/(Math.sqrt(((oldX)*(oldY))+((oldX)*(oldY))));
+
+                            add = Math.sqrt(((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1)));
+
+                            sumArc += add;
+                            oldX = layer.eventX;
+                            oldY = layer.eventY;
                         }
-     
+
                         if (is_pressed_shift) {//シフトキーを押しているときは45度単位で移動
                             if (angle > 0 && angle < 45) {
                                 boarder_layer.rotate = 90;
@@ -274,17 +275,30 @@ $(function(){
                                 boarder_layer.rotate = 45;
                             }
                         } else {//そうじゃないときは細かく移動
+
+
                             boarder_layer.rotate = layer.data.startRotate + (dragangle);
 
-                         }
+                        }
+                       if(sumArc > 6){
+                            alert("おかあさんをまってね");
+                            sumArc = 0;
+                            var scroll = $("body").scrollTop();
+                            $("body").scrollTop(scroll+$(".foodwrapper").height());
+                        }
                         // 他のビューの更新
                         updateImageView();
                         updateZoomView();
                         updateRotateView();
+
+                        isRolling = true;
+
+ 
                     },
                     dragstop: function(layer) {
                         // 透過解除
                         $canvas.getLayer("image").opacity = 1;
+                        isRolling = false;
                     },
                     data: {
                         startAngle: 0,
