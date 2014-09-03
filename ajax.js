@@ -63,7 +63,7 @@ $(document).ready(function(){
         else if(array["method"][i]["action"] == "wait") {
             //ind = 0;
             console.log("wait");
-            //$('#container').append("");
+            $('#container').append("<p class='time'><button class='add'>+</button> <button class='minus'>-</button><br>あと <span class='min'>0</span> ふん <span class='sec'>00</span> びょう まってね<br><button class='start'>タイマーをはじめる</button></p>");
         }
         else if(array["method"][i]["action"] == "unfire") {
             ind = 0;

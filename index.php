@@ -14,7 +14,8 @@
   <link rel="stylesheet" type="text/css" href="stylesheets/jquery.minimalect.css" media="screen" />
   <link rel="stylesheet" type="text/css" href="stylesheets/button.css" media="screen" />
 
-  <script type="text/javascript" src="js/jquery.minimalect.js"></script>
+<script type="text/javascript" src="js/jquery.minimalect.js"></script>
+<script type="text/javascript" src="js/timer.js"></script>
 
   <script>
 
