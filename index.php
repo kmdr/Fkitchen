@@ -58,6 +58,7 @@ mb_http_input("auto");
 mb_http_output("utf-8");
 
 $link = new mysqli("localhost", "root", "root", "Fkitchen");
+$link->set_charset('utf8');
 
 if(mysqli_connect_errno()) {
   printf("connect failed: %s\n", $link->connect_error());
@@ -85,7 +86,7 @@ if($result = mysqli_query($link, $sql)){
 }
 ?>
 </select>
-<input type="button" class="button buttonPink" id="r_send" value="つくる">
+<input type="button" class="button buttonPink makebutton" id="r_send" value="つくる">
 </form>
     </div>
 </body>

@@ -7,6 +7,7 @@
         <meta http-equiv="Content-Script-Type" content="text/javascript" />
         <title>Canvas</title>
         <link rel="stylesheet" href="stylesheets/style.css">
+        <link rel="stylesheet" href="stylesheets/timer.css">
         <script src="js/jquery.min.js"></script>
         <!--[if IE]><script type="text/javascript" src="/js/excanvas.compiled.js"></script><![endif]-->
         <script src="js/imagesLoaded.js"></script>
@@ -37,22 +38,6 @@
     </style>
     <body>
         <div class="wrapper">
-        <!-- キャンバスのラップ -->
-            <div id="canvas-wrapper">
-                <canvas id="cover-canvas" width="800" height="450"></canvas>
-    <!--             <div><img src="images/img_board.png" height="227" width="366"></div>
-     -->
-            </div>
-     
-            <!-- 生成される画像 -->
-            <div class="generated-image">
-            </div>
-     
-            <!-- 事前に一回画像を読み込ませておく -->
-            <div id="preload">
-                <img src="images/utensil/img_inPan_bg.png" height="633" width="837">
-                <img src="images/utensil/img_inPan_1.png" height="633" width="633">
-            </div>
 
             <div class='foodwrapper timer'>
                 <p class='time'>

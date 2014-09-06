@@ -22,9 +22,17 @@ h2 {
   margin-top: 20px;
 }
 
+.finishimg {
+  width: 653px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.finishimg p {
+  font-size: 20px;
+}
+
 .goTop {
   display: block;
-  border-bottom: 1px solid #535353;
   cursor: pointer;
 }
 

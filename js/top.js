@@ -5,13 +5,14 @@ function scrollDownT(){
 
 
 $(function(){
-	$(".button").click(function(){
-
+	$(".makebutton").click(function(){
+		console.log(".button click");
 		setTimeout('scrollDownT()',1000);
 	})
 
 	$(".goTop").click(function(){
-		 $(".foodwrapper").remove();
+		console.log(".goTop click");
+		$(".foodwrapper").remove();
 		$("body").scrollTop(0);
 	})
 

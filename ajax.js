@@ -63,7 +63,7 @@ $(document).ready(function(){
         else if(array["method"][i]["action"] == "wait") {
             //ind = 0;
             console.log("wait");
-            $('#container').append("<p class='time'><button class='add'>+</button> <button class='minus'>-</button><br>あと <span class='min'>0</span> ふん <span class='sec'>00</span> びょう まってね<br><button class='start'>タイマーをはじめる</button></p>");
+            $('#container').append("<div class='foodwrapper timer'><p class='time'><button class='timerAdd'>+</button> <button class='timerMinus'>-</button><br>あと <span class='min'>0</span> ふん <span class='sec'>00</span> びょう まってね<br><button class='start'>タイマーをはじめる</button></p></div>");
         }
         else if(array["method"][i]["action"] == "unfire") {
             ind = 0;
@@ -75,8 +75,8 @@ $(document).ready(function(){
 	  }
 
 
-      $('#container').append("<div class='foodwrapper'><h1>カレーがかんせいしました！</h1><img src='images/finishimg.jpg'><p class='goTop'>ちがうりょうりをつくる。</p></div>");
-    $('head').append("<script type='text/javascript' src='js/cut.js'></script>  <script type='text/javascript' src='js/jqueryRotate.js'></script>  <script type='text/javascript' src='js/fire.js'></script>     <script src='js/imagesLoaded.js'></script>     <script src='js/jcanvas.js'></script>     <script src='js/mix.js'></script>     <script src='js/top.js'></script>  </head> <style type='text/css'>     .canvas-wrapper {         position: relative;         width: 840px;         height: 640px;         margin: 0 auto;     }     .cover-canvas {         position: absolute;         background-color: #888;     }     .canvas-wrapper div{         position: absolute;         top: 209px;         left: 384px;     }     .preload {         display: none;     } </style> ");
+      $('#container').append("<div class='foodwrapper'><div class='finishimg'><img src='images/finishimg.png'><p class='goTop button buttonPink'>ちがうりょうり<br>をつくる</p></div></div>");
+    $('head').append("<script type='text/javascript' src='js/cut.js'></script>  <script type='text/javascript' src='js/jqueryRotate.js'></script>  <script type='text/javascript' src='js/fire.js'></script>     <script src='js/imagesLoaded.js'></script>     <script src='js/jcanvas.js'></script>     <script src='js/mix.js'></script>     <script src='js/timer.js'></script>     <script src='js/top.js'></script>  </head> <style type='text/css'>     .canvas-wrapper {         position: relative;         width: 840px;         height: 640px;         margin: 0 auto;     }     .cover-canvas {         position: absolute;         background-color: #888;     }     .canvas-wrapper div{         position: absolute;         top: 209px;         left: 384px;     }     .preload {         display: none;     } </style> ");
 
 	}).fail(function(XMLHttpRequest, textStatus, errorThrown){
 	  alert(errorThrown);
