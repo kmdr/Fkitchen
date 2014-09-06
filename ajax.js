@@ -63,7 +63,7 @@ $(document).ready(function(){
         else if(array["method"][i]["action"] == "wait") {
             //ind = 0;
             console.log("wait");
-            $('#container').append("<div class='foodwrapper timer'><p class='time'><button class='timerAdd'>+</button> <button class='timerMinus'>-</button><br>あと <span class='min'>0</span> ふん <span class='sec'>00</span> びょう まってね<br><button class='start'>タイマーをはじめる</button></p></div>");
+            $('#container').append("<div class='foodwrapper timer'><p class='time'><button class='timerAdd'>+</button> <button class='timerMinus'>-</button><br><button class='timerReset'>リセット</button><button class='timerStop'>ちょっとまった！</button><br>あと <span class='min'>0</span> ふん <span class='sec'>00</span> びょう まってね<br><button class='start'>タイマーをはじめる</button></p></div>");
         }
         else if(array["method"][i]["action"] == "unfire") {
             ind = 0;
